@@ -12,7 +12,7 @@
 	<string name="message_enabled">ScreenLock Device Admin: Enabled. You can now lock screen by tapping ScreenLock icon.</string>
 	<string name="message_disabled">ScreenLock Device Admin: Disabled. You can now uninstall the application.</string>
 	<string name="optional_message">This is an optional message to warn the user about disabling.</string>
-	<string name="versioncode">2</string>
-	<string name="versionname">1.1</string>
+	<string name="versioncode">1</string>
+	<string name="versionname">1.0</string>
 
 </resources>
