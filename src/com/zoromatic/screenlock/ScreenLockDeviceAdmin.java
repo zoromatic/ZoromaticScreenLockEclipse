@@ -15,7 +15,7 @@ public class ScreenLockDeviceAdmin extends DeviceAdminReceiver{
     }  
   
     void showToast(Context context, CharSequence msg) {  
-        Toast.makeText(context, msg, Toast.LENGTH_SHORT).show();  
+        Toast.makeText(context, msg, Toast.LENGTH_LONG).show();  
     }  
   
     @Override  

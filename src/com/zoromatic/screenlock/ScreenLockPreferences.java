@@ -2,6 +2,7 @@ package com.zoromatic.screenlock;
 
 import android.app.Activity;
 import android.app.ActivityManager;
+import android.app.admin.DeviceAdminInfo;
 import android.app.admin.DevicePolicyManager;
 import android.content.ComponentName;
 import android.content.Context;
@@ -23,6 +24,7 @@ public class ScreenLockPreferences extends PreferenceActivity implements OnShare
 	ActivityManager activityManager;
 	ComponentName compName;
 	
+	@SuppressWarnings("deprecation")
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
@@ -60,6 +62,7 @@ public class ScreenLockPreferences extends PreferenceActivity implements OnShare
         }
 	}
 	
+	@SuppressWarnings("deprecation")
 	@Override
 	protected void onActivityResult(int requestCode, int resultCode, Intent data) {
     	switch (requestCode) {
@@ -92,6 +95,7 @@ public class ScreenLockPreferences extends PreferenceActivity implements OnShare
 		finish();
     }
 	
+	@SuppressWarnings("deprecation")
 	@Override
 	public void onSharedPreferenceChanged(SharedPreferences sharedPreferences, String key) {
 	   
@@ -106,6 +110,7 @@ public class ScreenLockPreferences extends PreferenceActivity implements OnShare
 		    			intent.putExtra(DevicePolicyManager.EXTRA_DEVICE_ADMIN, compName);
 		    			intent.putExtra(DevicePolicyManager.EXTRA_ADD_EXPLANATION,
 		    					getResources().getString(R.string.additional_message));
+		    			intent.putExtra("force-locked", DeviceAdminInfo.USES_POLICY_FORCE_LOCK);
 		    			startActivityForResult(intent, RESULT_ENABLE);
 		        	}
 		        	else {
@@ -121,7 +126,8 @@ public class ScreenLockPreferences extends PreferenceActivity implements OnShare
 		
 	}
 		    
-    @Override
+    @SuppressWarnings("deprecation")
+	@Override
     protected void onResume() {
         super.onResume();
 
@@ -129,7 +135,8 @@ public class ScreenLockPreferences extends PreferenceActivity implements OnShare
         getPreferenceScreen().getSharedPreferences().registerOnSharedPreferenceChangeListener(this);
     }
 
-    @Override
+    @SuppressWarnings("deprecation")
+	@Override
     protected void onPause() {
         super.onPause();
 

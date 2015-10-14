@@ -30,7 +30,7 @@
             android:layout_margin="8dip"
             android:layout_span="2"
             android:textColor="#cccccc"
-            android:textSize="10dip"
+            android:textSize="12sp"
             android:textStyle="italic" />
     </TableRow>
 

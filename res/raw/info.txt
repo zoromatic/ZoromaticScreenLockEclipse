@@ -1,5 +1,5 @@
 <h3>Zoromatic ScreenLock</h3>
 
-Version 1<br>
-Copyright 2013<br>
+Version 1.5<br>
+Copyright 2013-2015<br>
 <b>zoromaticsoftware.blogspot.com</b><br><br>

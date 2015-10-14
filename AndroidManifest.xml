@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.zoromatic.screenlock"
-    android:versionCode="2"
-    android:versionName="1.1" >
+    android:versionCode="6"
+    android:versionName="1.5" >
 
     <uses-sdk
         android:minSdkVersion="8"
-        android:targetSdkVersion="17" />
+        android:targetSdkVersion="21" />
     
     <uses-permission android:name="android.permission.DEVICE_POWER" >
     </uses-permission>
@@ -26,7 +26,8 @@
         <activity
             android:icon="@drawable/lock_screen"
             android:name=".ScreenLockActivity"
-            android:label="@string/screenlock" >
+            android:label="@string/screenlock" 
+            android:theme="@android:style/Theme.Translucent.NoTitleBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
